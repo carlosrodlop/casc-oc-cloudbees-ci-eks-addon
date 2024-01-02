@@ -1,5 +1,4 @@
-# https://pre-commit.com/#new-hooks
-# https://engineeringfordatascience.com/posts/pre_commit_yaml/
+# Copyright (c) CloudBees, Inc.
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
