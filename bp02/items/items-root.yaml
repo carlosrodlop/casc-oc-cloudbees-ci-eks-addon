@@ -9,7 +9,7 @@ items:
         memory: 2048
         cpus: 1.0
         disk: 20
-        storageClassName: ${tf_sc_not_ha}
+        storageClassName: "gp3"
   - kind: managedController
     name: team-b
     configuration:
@@ -17,7 +17,7 @@ items:
         memory: 6144
         cpus: 4.0
         disk: 5
-        storageClassName: ${tf_sc_not_ha}
+        storageClassName: "gp3"
     properties:
       - configurationAsCode:
-          bundle: ${team_b_casc}
+          bundle: "main/bp02.team-b"

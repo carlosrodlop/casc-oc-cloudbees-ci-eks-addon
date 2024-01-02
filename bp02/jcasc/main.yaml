@@ -36,7 +36,7 @@ beekeeper:
     autoUpgradePlugins: true
 masterprovisioning:
   kubernetes:
-    nodeSelectors: ${tf_node_labels}
+    nodeSelectors: "ci_type=cb-apps"
     yaml: |-
       ---
       apiVersion: apps/v1
@@ -47,5 +47,5 @@ masterprovisioning:
             tolerations:
               - key: "dedicated"
                 operator: "Equal"
-                value: ${tf_node_taints}
+                value: "cb-apps"
                 effect: "NoSchedule"
